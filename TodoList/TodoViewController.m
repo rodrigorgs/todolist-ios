@@ -7,38 +7,35 @@
 //
 
 #import "TodoViewController.h"
+#import "ListaTarefas.h"
 
 @interface TodoViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
-@property (strong, nonatomic) NSMutableArray *lista;
+@property (strong, nonatomic) ListaTarefas *tarefas;
 
 @end
 
 @implementation TodoViewController
 
 - (void)atualizaInterface {
-    self.textView.text = [self.lista componentsJoinedByString:@"\n"];
+    self.textView.text = [self.tarefas description];
 }
 // https://github.com/rodrigorgs/todolist-ios
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    self.lista = [[NSMutableArray alloc] init];
-    [self.lista addObject:@"Estudar"];
-    [self.lista addObject:@"Trabalhar"];
-    [self.lista addObject:@"Jogar"];
-    
+
+    self.tarefas = [[ListaTarefas alloc] init];
     [self atualizaInterface];
 }
 
 - (IBAction)adicionarTarefa:(id)sender {
     NSString *tarefa = self.textField.text;
     self.textField.text = @"";
-    [self.lista addObject:tarefa];
+    [self.tarefas adicionaItem:tarefa];
     [self atualizaInterface];
 }
 
