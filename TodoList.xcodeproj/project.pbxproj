@@ -21,6 +21,7 @@
 		9739843C1892EAC400D99EED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9739841E1892EAC400D99EED /* UIKit.framework */; };
 		973984441892EAC400D99EED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 973984421892EAC400D99EED /* InfoPlist.strings */; };
 		973984461892EAC400D99EED /* TodoListTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 973984451892EAC400D99EED /* TodoListTests.m */; };
+		973984511892F2F700D99EED /* ListaTarefas.m in Sources */ = {isa = PBXBuildFile; fileRef = 973984501892F2F700D99EED /* ListaTarefas.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		973984411892EAC400D99EED /* TodoListTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TodoListTests-Info.plist"; sourceTree = "<group>"; };
 		973984431892EAC400D99EED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		973984451892EAC400D99EED /* TodoListTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TodoListTests.m; sourceTree = "<group>"; };
+		9739844F1892F2F700D99EED /* ListaTarefas.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListaTarefas.h; sourceTree = "<group>"; };
+		973984501892F2F700D99EED /* ListaTarefas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListaTarefas.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				973984291892EAC400D99EED /* TodoAppDelegate.h */,
 				9739842A1892EAC400D99EED /* TodoAppDelegate.m */,
 				9739842C1892EAC400D99EED /* Main.storyboard */,
+				9739844F1892F2F700D99EED /* ListaTarefas.h */,
+				973984501892F2F700D99EED /* ListaTarefas.m */,
 				9739842F1892EAC400D99EED /* TodoViewController.h */,
 				973984301892EAC400D99EED /* TodoViewController.m */,
 				973984321892EAC400D99EED /* Images.xcassets */,
@@ -250,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				973984511892F2F700D99EED /* ListaTarefas.m in Sources */,
 				973984311892EAC400D99EED /* TodoViewController.m in Sources */,
 				9739842B1892EAC400D99EED /* TodoAppDelegate.m in Sources */,
 				973984271892EAC400D99EED /* main.m in Sources */,
