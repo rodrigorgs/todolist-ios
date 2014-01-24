@@ -12,23 +12,33 @@
 @property (weak, nonatomic) IBOutlet UITextField *textField;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
 
+@property (strong, nonatomic) NSMutableArray *lista;
+
 @end
 
 @implementation TodoViewController
 
+- (void)atualizaInterface {
+    self.textView.text = [self.lista componentsJoinedByString:@"\n"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    self.lista = [[NSMutableArray alloc] init];
+    [self.lista addObject:@"Estudar"];
+    [self.lista addObject:@"Trabalhar"];
+    [self.lista addObject:@"Jogar"];
+    
+    [self atualizaInterface];
 }
 
 - (IBAction)adicionarTarefa:(id)sender {
+    NSString *tarefa = self.textField.text;
+    self.textField.text = @"";
+    [self.lista addObject:tarefa];
+    [self atualizaInterface];
 }
 
 @end
