@@ -9,6 +9,8 @@
 #import "TodoViewController.h"
 
 @interface TodoViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *textField;
+@property (weak, nonatomic) IBOutlet UITextView *textView;
 
 @end
 
@@ -24,6 +26,9 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)adicionarTarefa:(id)sender {
 }
 
 @end
